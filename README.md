@@ -18,7 +18,7 @@
 <style>.mainmenubtn{background-color:rgb(26, 29, 75);color:#20eb19;border:none;cursor:pointer;padding:20px;margin-top:20px}.mainmenubtn:hover{background-color:#fff}.dropdown{position:relative;display:inline-block}.dropdown-child{display:none;background-color:#fff;min-width:200px}.dropdown-child a{color:maroon;padding:20px;text-decoration:none;display:block}.dropdown:hover .dropdown-child{display:block}</style>
 <link rel="dns-prefetch" href="//www.lib.unika.ac.id"></head>
 <div class="dropdown">
-<button class="mainmenubtn">Tugas Modul Praktik 3 no 1</button>
+<button class="mainmenubtn">Klik untuk MENU</button>
 <div class="dropdown-child">
 <a href="index.html">Homepage</a>
 <a href="modul 1 no 1.html">Profil Perpustakaan</a>
