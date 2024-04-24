@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modul 5 no 3</title>
+</head>
+<body>
+
+<h2 id="judulPameran">Pameran Buku</h2>
+
+<div id="deskripsiPameran">
+    <p>Ikuti pameran buku terbaru di perpustakaan SUKA BACA!</p>
+</div>
+
+<button id="tombolPameran">Lihat Detail Pameran</button>
+
+<h3>Daftar Buku Novel dalam Pameran</h3>
+<ul id="daftarBuku"></ul>
+
+<script>
+    // elemen berdasarkan ID - Javascript
+    var judulPameran = document.getElementById("judulPameran");
+    var deskripsiPameran = document.getElementById("deskripsiPameran");
+    var tombolPameran = document.getElementById("tombolPameran");
+    var daftarBuku = document.getElementById("daftarBuku");
+
+    // HTML DOM event untuk tombol "lihat detail pameran"
+    tombolPameran.addEventListener("click", function() {
+        deskripsiPameran.innerHTML = "<p>Detail Pameran: Pameran buku terbaru akan diselenggarakan pada tanggal 30 april 2024.</p>";
+
+        // daftar buku novel
+        var bukuNovel = [
+            { judul: "Harry Potter and the Philosopher's Stone", pengarang: "J.K. Rowling" },
+            { judul: "To Kill a Mockingbird", pengarang: "Harper Lee" },
+            { judul: "Pride and Prejudice", pengarang: "Jane Austen" },
+            { judul: "The Great Gatsby", pengarang: "F. Scott Fitzgerald" },
+            { judul: "1984", pengarang: "George Orwell" },
+            { judul: "The Catcher in the Rye", pengarang: "J.D. Salinger" },
+            { judul: "Moby-Dick", pengarang: "Herman Melville" },
+            { judul: "War and Peace", pengarang: "Leo Tolstoy" },
+            { judul: "The Hobbit", pengarang: "J.R.R. Tolkien" },
+            { judul: "Brave New World", pengarang: "Aldous Huxley" },
+            { judul: "The Lord of the Rings", pengarang: "J.R.R. Tolkien" },
+            { judul: "Jane Eyre", pengarang: "Charlotte Brontë" },
+            { judul: "Wuthering Heights", pengarang: "Emily Brontë" },
+            { judul: "The Picture of Dorian Gray", pengarang: "Oscar Wilde" },
+            { judul: "Dracula", pengarang: "Bram Stoker" }
+        ];
+
+       
+        bukuNovel.forEach(function(buku) {
+            var itemBuku = document.createElement("li");
+            itemBuku.textContent = buku.judul + " - " + buku.pengarang;
+            daftarBuku.appendChild(itemBuku);
+        });
+    });
+
+    </script>
+  </body>
+  </html>
