@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modul 5 no 3</title>
+  <style>
+    .book {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+      text-align: center;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pameran Buku</h1>
+  
+  <!-- Daftar Buku -->
+  <div id="bookList"></div>
+
+  <!-- JavaScript -->
+  <script>
+    // Daftar buku
+    var books = [
+      { title: "Bicara itu ada seninya", author: "Oh Su Hyang" },
+      { title: "Rahasia Bersikap Tenang dalam situasi apapun", author: "Sabrina Ara" },
+      { title: "loveliness", author: "Alwi Syahrin" },
+      { title: "Overthinking is my midlle name", author: "Alwi Syahrin" },
+      { title: "Buku 5", author: "Alwi Syahrin" }
+    ];
+
+    // Fungsi untuk menampilkan detail buku
+    function showBookDetails(title, author) {
+      alert("Judul: " + title + "\nPenulis: " + author);
+    }
+
+    // Menampilkan daftar buku
+    var bookListDiv = document.getElementById("bookList");
+    books.forEach(function(book) {
+      var bookDiv = document.createElement("div");
+      bookDiv.className = "book";
+      bookDiv.textContent = book.title;
+
+      // Menambahkan event click untuk menampilkan detail buku
+      bookDiv.addEventListener("click", function() {
+        showBookDetails(book.title, book.author);
+      });
+
+      bookListDiv.appendChild(bookDiv);
+    });
+  </script>
+</body>
+</html>
