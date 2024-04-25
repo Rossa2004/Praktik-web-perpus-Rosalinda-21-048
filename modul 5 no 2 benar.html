@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Perpustakaan</title>
+</head>
+<body>
+
+<script>
+    // Deklarasi variabel
+    var nama = "Rosalinda";
+    var umur = 25;
+    var beratBadan = 50;
+    var keanggotaan = false; // true untuk anggota, false untuk bukan anggota
+
+    // Menampilkan data menggunakan document.write
+    document.write("<h2>Data Diri</h2>");
+    document.write("Nama: " + nama + "<br>");
+    document.write("Umur: " + umur + " tahun<br>");
+    document.write("Berat Badan: " + beratBadan + " kg<br>");
+
+    // Struktur kondisi tentang keanggotaan perpustakaan
+    if (keanggotaan) {
+        document.write("<p>Anda adalah anggota perpustakaan.</p>");
+    } else {
+        document.write("<p>Anda bukan anggota perpustakaan.</p>");
+    }
+
+    // Struktur perulangan untuk "daftar menjadi anggota"
+    document.write("<h2>Daftar Menjadi Anggota</h2>");
+    for (var i = 1; i <= 3; i++) {
+        document.write("<p>Langkah ke-" + i + ": Melengkapi formulir pendaftaran.</p>");
+    }
+</script>
+
+</body>
+</html>
