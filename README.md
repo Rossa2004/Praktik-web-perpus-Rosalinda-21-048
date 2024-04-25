@@ -27,6 +27,9 @@
 <a href="Modul 2 next.html">Tabel Bahan, Pemesanan, dan Perpanjangan Peminjaman Buku</a > 
 <a href="Modul 3 no 1.html">CSS di Halaman Web Perpustakaan</a>
 <a href="Modul 3 next.html">Variasi Penggunaan CSS</a>
+<a href="Modul 4 benar.html">website dengan dropdown menu</a>
+<a href="Modul 5 no 1.html">Penggunaan Javascript</a>
+<a href="Modul 5 no 2 benar.html">Penggunaan variabel, operator, kondisi dan perulangan</a>
 <a href="modul 5 no 3 tp js.html">Pameran Buku</a>
 
 </div>
