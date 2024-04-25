@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modul 5 nomor 2</title>
+</head>
+<body onload="loadBooks()">
+
+  <h1>Selamat Datang di Perpustakaan</h1>
+  
+  <!-- Penggunaan variabel dan operator -->
+  <script>
+    var x = 5;
+    if (x < 2) {
+      window.alert(x + " < 2");
+    } else {
+      window.alert(x + " > 2");
+    }
+  </script>
+
+
+
+  <!-- Struktur kondisi -->
+  <h2>Status Anggota</h2>
+  <p id="status"></p>
+  <script>
+    var age = 10;
+    if (age >= 10) {
+      document.getElementById("status").innerHTML = "Anda adalah anggota.";
+    } else {
+      document.getElementById("status").innerHTML = "Anda belum menjadi anggota.";
+    }
+  </script>
+
+  <!-- Struktur perulangan -->
+  <h3>Daftar Buku</h3>
+  <ul id="bookList"></ul>
+  <script>
+    function loadBooks() {
+      var books = ["Buku Novel", "Buku Komik", "Buku Pelajaran", "Buku Filsafat", "Buku Sejarah"];
+      var bookList = document.getElementById("bookList");
+      
+      for (var i = 0; i < books.length; i++) {
+        var listItem = document.createElement("li");
+        listItem.textContent = books[i];
+        bookList.appendChild(listItem);
+      }
+    }
+  </script>
+
+    <!-- HTML DOM Event -->
+    <h4 id="hoverText" onmouseover="changeColor()">Daftar Menjadi Anggota</h4>
+    <script>
+      function changeColor() {
+        document.getElementById("hoverText").style.color = "red";
+      }
+    </script>
+  </body>
+  </html>
+  
