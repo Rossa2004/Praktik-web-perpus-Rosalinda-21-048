@@ -30,10 +30,8 @@
 <a href="m4 nyerah.html">Website ucapan selamat datang, Tabel, dan Form</a>
 <a href="51 tess.html">Menampilkan data dalam Javascript</a>
 <a href="52 tess.html">Penggunaan variabel, operator, kondisi dan perulangan</a>
-<a href="modul 5 no 2.html">Penggunaan variabel, operator, kondisi dan perulangan</a>
 <a href="modul 5 no 3 tp js.html">Pameran Buku</a>
 <a href="modul 5 no 3.html">Pameran Buku</a>
-<a href="m4 nyerah.html">Pameran Buku</a>
 
 
 </div>
