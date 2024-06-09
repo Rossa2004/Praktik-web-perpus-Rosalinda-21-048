@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementasi JavaScript: Variabel, Operator, Struktur Kondisi, dan Perulangan</title>
+</head>
+<body>
+
+    <h1>Implementasi JavaScript: Variabel, Operator, Struktur Kondisi, dan Perulangan</h1>
+
+    <script>
+        // 1. Variabel 
+        var nama = "Lenny"; // Variabel string
+        var umur = 20; // Variabel numerik
+        var berat = 40.5; // Variabel numerik
+
+        // 2. Operator Kondisi if 
+        if (umur >= 18) { // Operator perbandingan (>=)
+            document.write("<p>2. Operator Kondisi if: " + nama + " sudah dewasa.</p>");
+        } else {
+            document.write("<p>Operator Kondisi if: " + nama + " masih anak-anak.</p>");
+        }
+
+        //  Operator Kondisi switch
+        var nilai = 'B'; // Variabel karakter
+        var keterangan;
+        switch (nilai) {
+            case 'A':
+                keterangan = "Sangat baik";
+                break;
+            case 'B':
+                keterangan = "Baik";
+                break;
+            case 'C':
+                keterangan = "Cukup";
+                break;
+            default:
+                keterangan = "Tidak lulus";
+        }
+        document.write("<p>2. Operator Kondisi switch: Nilai Anda: " + nilai + ", Keterangan: " + keterangan + "</p>");
+
+        // 3. Perulangan
+        document.write("<p>3. Perulangan:</p>");
+        for (var i = 1; i <= 5; i++) { // Variabel i (loop counter)
+            document.write("<p>Pertanyaan " + i + "</p>");
+        }
+
+        
+
+        // 4. Operasi (cth : Matematika)
+        var bilangan1 = 10; // Variabel numerik
+        var bilangan2 = 5; // Variabel numerik
+        var hasilTambah = bilangan1 + bilangan2; // Operator penjumlahan (+)
+        var hasilKurang = bilangan1 - bilangan2; // Operator pengurangan (-)
+        var hasilKali = bilangan1 * bilangan2; // Operator perkalian (*)
+        var hasilBagi = bilangan1 / bilangan2; // Operator pembagian (/)
+        var hasilModulus = bilangan1 % bilangan2; // Operator modulus (%)
+
+        document.write("<p>4. Operasi (cth : Matematika):</p>");
+        document.write("<p>Penjumlahan: " + bilangan1 + " + " + bilangan2 + " = " + hasilTambah + "</p>");
+        document.write("<p>Pengurangan: " + bilangan1 + " - " + bilangan2 + " = " + hasilKurang + "</p>");
+        document.write("<p>Perkalian: " + bilangan1 + " * " + bilangan2 + " = " + hasilKali + "</p>");
+        document.write("<p>Pembagian: " + bilangan1 + " / " + bilangan2 + " = " + hasilBagi + "</p>");
+        document.write("<p>Modulus: " + bilangan1 + " % " + bilangan2 + " = " + hasilModulus + "</p>");
+
+    </script>
+
+</body>
+</html>
