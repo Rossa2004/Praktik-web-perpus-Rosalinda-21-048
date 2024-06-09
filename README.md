@@ -10,11 +10,11 @@
             }
         </script>
 <script>
-        console. log ( "Hello Library Lovers") ;
-			</script>
+        console.log("Hello Library Lovers");
+</script>
 <script>
         document.write("<h1>Hello Libraries!</h1>");
-			</script>
+</script>
 <style>.mainmenubtn{background-color:rgb(26, 29, 75);color:#20eb19;border:none;cursor:pointer;padding:20px;margin-top:20px}.mainmenubtn:hover{background-color:#fff}.dropdown{position:relative;display:inline-block}.dropdown-child{display:none;background-color:#fff;min-width:200px}.dropdown-child a{color:maroon;padding:20px;text-decoration:none;display:block}.dropdown:hover .dropdown-child{display:block}</style>
 <link rel="dns-prefetch" href="//www.lib.unika.ac.id"></head>
 <div class="dropdown">
@@ -47,13 +47,4 @@
 <tr>
 <td>
 <p> Hello! Terima kasih telah mengunjungi website perpustakaan ini, silahkan berkunjung kembali</p>
-<p style="text-align: justify;"> Website ini dibuat untuk memenuhi tugas pada mata kuliah Pemrograman Web Praktik dengan dosen pengampu Ibu Himma Dewiyana program studi S-1 Perpustakaan dan Sains Informasi, Fakultas Ilmu Budaya, Universitas Sumatera Utara </p>
-</td>
-</tr>
-</table></center>
-<footer style="text-align: center;">
-<p>Copyright &copy; Rosalinda - 210709048
-</p>
-</footer>
-</body>
-</html
+<p style="text-align: justify;"> Website ini dibuat untuk memenuhi tugas pada m
