@@ -5,14 +5,12 @@
 <body>
 <script>
             alert("SELAMAT DATANG DI WEBSITE PERPUSTAKAAN ROSALINDA");
-            function saya Hello(){
+            
                 alert("Hello Libraries!");
             }
         </script>
 <script>
-        console. log ( "Hello Library Lovers") ;
-			</script>
-<script>
+        
         document.write("<h1>Hello Libraries!</h1>");
 			</script>
 <style>.mainmenubtn{background-color:rgb(26, 29, 75);color:#20eb19;border:none;cursor:pointer;padding:20px;margin-top:20px}.mainmenubtn:hover{background-color:#fff}.dropdown{position:relative;display:inline-block}.dropdown-child{display:none;background-color:#fff;min-width:200px}.dropdown-child a{color:maroon;padding:20px;text-decoration:none;display:block}.dropdown:hover .dropdown-child{display:block}</style>
@@ -36,9 +34,6 @@
 
 
 </div>
-</body>
-</html>
-</nav>
 <center><h1>WELCOME TO LIBRARY </h1>
 <img src="perpus unika.jpg" style="width:1340px;height:300px;" align="middle">
 <hr></hr>
@@ -52,8 +47,5 @@
 </tr>
 </table></center>
 <footer style="text-align: center;">
-<p>Copyright &copy; Rosalinda - 210709048
-</p>
+<p>Rosalinda - 210709048</p>
 </footer>
-</body>
-</html
