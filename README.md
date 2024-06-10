@@ -16,7 +16,6 @@
 <style>.mainmenubtn{background-color:rgb(26, 29, 75);color:#20eb19;border:none;cursor:pointer;padding:20px;margin-top:20px}.mainmenubtn:hover{background-color:#fff}.dropdown{position:relative;display:inline-block}.dropdown-child{display:none;background-color:#fff;min-width:200px}.dropdown-child a{color:maroon;padding:20px;text-decoration:none;display:block}.dropdown:hover .dropdown-child{display:block}</style>
     
 <link rel="dns-prefetch" href="//www.lib.unika.ac.id"></head>
-<link rel="https://jQuery-3.5.1.min.js"></head>
 <div class="dropdown">
 <button class="mainmenubtn">Klik untuk MENU</button>
 <div class="dropdown-child">
