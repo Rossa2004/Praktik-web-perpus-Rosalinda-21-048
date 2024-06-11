@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffc0cb; /* Warna background merah muda */
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #90ee90; /* Warna background hijau terang */
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 5px;
+            width: 200px;
+        }
+        input[type="submit"], input[type="button"] {
+            padding: 5px 10px;
+            background-color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Database</h1>
+    <table id="data">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Telepon</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data sementara -->
+            <tr>
+                <td>1</td>
+                <td>Yuki Kato</td>
+                <td>yuki@gmail.com</td>
+                <td>012345678910</td>
+                <td>
+                    <button onclick="editRow(this)">Ubah</button>
+                    <button onclick="deleteRow(this)">Hapus</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sky Osa</td>
+                <td>sky@gmail.com</td>
+                <td>098765479054</td>
+                <td>
+                    <button onclick="editRow(this)">Ubah</button>
+                    <button onclick="deleteRow(this)">Hapus</button>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Ruby Jenny</td>
+                <td>jenni@gmail.com</td>
+                <td>014563289754</td>
+                <td>
+                    <button onclick="editRow(this)">Ubah</button>
+                    <button onclick="deleteRow(this)">Hapus</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Tambah Data</h2>
+    <form id="addForm">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required><br><br>
+
+        <label for="telepon">Telepon:</label>
+        <input type="text" id="telepon" name="telepon" required><br><br>
+
+        <input type="submit" value="Tambah">
+    </form>
+
+    <h2>Ubah Data</h2>
+    <form id="editForm" style="display: none;">
+        <input type="hidden" id="editID">
+        <label for="editNama">Nama:</label>
+        <input type="text" id="editNama" name="editNama" required><br><br>
+
+        <label for="editEmail">Email:</label>
+        <input type="text" id="editEmail" name="editEmail" required><br><br>
+
+        <label for="editTelepon">Telepon:</label>
+        <input type="text" id="editTelepon" name="editTelepon" required><br><br>
+
+        <input type="submit" value="Simpan">
+        <input type="button" value="Batal" onclick="cancelEdit()">
+    </form>
+
+    <script>
+        // Data sementara
+        var data = [
+            { id: 1, nama: "Yuki Kato", email: "yuki@gmail.com", telepon: "012345678910" },
+            { id: 2, nama: "Sky Osa", email: "sky@gmail.com", telepon: "098765479054" },
+            { id: 3, nama: "Ruby Jenny", email: "jenni@gmail.com", telepon: "014563289754" }
+        ];
+
+        // Fungsi untuk menampilkan data dalam tabel
+        function showData() {
+            var tableBody = document.getElementById("data").getElementsByTagName('tbody')[0];
+            tableBody.innerHTML = '';
+
+            for (var i = 0; i < data.length; i++) {
+                var row = tableBody.insertRow();
+                row.innerHTML = "<td>" + data[i].id + "</td><td>" + data[i].nama + "</td><td>" + data[i].email + "</td><td>" + data[i].telepon + "</td><td><button onclick='editRow(this)'>Ubah</button> <button onclick='deleteRow(this)'>Hapus</button></td>";
+            }
+        }
+
+        showData();
+
+        // Fungsi untuk menambah data
+        document.getElementById("addForm").onsubmit = function(event) {
+            event.preventDefault();
+            var nama = document.getElementById("nama").value;
+            var email = document.getElementById("email").value;
+            var telepon = document.getElementById("telepon").value;
+            var id = data.length + 1;
+            data.push({ id: id, nama: nama, email: email, telepon: telepon });
+            showData();
+            document.getElementById("addForm").reset();
+        };
+
+        // Fungsi untuk mengubah data
+        function editRow(button) {
+            var row = button.parentNode.parentNode;
+            var id = row.cells[0].innerHTML;
+            var nama = row.cells[1].innerHTML;
+            var email = row.cells[2].innerHTML;
+            var telepon = row.cells[3].innerHTML;
+            document.getElementById("editID").value = id;
+            document.getElementById("editNama").value = nama;
+            document.getElementById("editEmail").value = email;
+            document.getElementById("editTelepon").value = telepon;
+            document.getElementById("editForm").style.display = "block";
+        }
+
+        document.getElementById("editForm").onsubmit = function(event) {
+            event.preventDefault();
+            var id = document.getElementById("editID").value;
+            var nama = document.getElementById("editNama").value;
+           
