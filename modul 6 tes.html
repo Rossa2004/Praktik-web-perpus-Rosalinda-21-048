@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        #searchBox {
+            text-align: right;
+            margin-bottom: 20px;
+            background-color: #3498db;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #searchInput {
+            padding: 5px;
+        }
+        #searchButton {
+            padding: 5px 10px;
+            background-color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #2ecc71; /* Warna latar belakang tabel */
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Perpustakaan</h1>
+    <div id="searchBox">
+        <input type="text" id="searchInput" placeholder="Cari koleksi...">
+        <button id="searchButton">Cari</button>
+    </div>
+    <table id="collectionTable">
+        <thead>
+            <tr>
+                <th>Judul</th>
+                <th>Pengarang</th>
+                <th>Tahun Terbit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Daftar koleksi akan ditambahkan di sini -->
+        </tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Data koleksi buku best seller Indonesia
+        var koleksi = [
+            { judul: "Laskar Pelangi", pengarang: "Andrea Hirata", tahun: 2005 },
+            { judul: "Ayat-Ayat Cinta", pengarang: "Habiburrahman El Shirazy", tahun: 2004 },
+            { judul: "Sang Pemimpi", pengarang: "Andrea Hirata", tahun: 2006 },
+            { judul: "5 cm", pengarang: "Donny Dhirgantoro", tahun: 2005 },
+            { judul: "Perahu Kertas", pengarang: "Dee Lestari", tahun: 2008 },
+            { judul: "Ayat-Ayat Cinta 2", pengarang: "Habiburrahman El Shirazy", tahun: 2007 },
+            { judul: "Bumi Manusia", pengarang: "Pramoedya Ananta Toer", tahun: 1980 },
+            { judul: "Ronggeng Dukuh Paruk", pengarang: "Ahmad Tohari", tahun: 1982 },
+            { judul: "Tenggelamnya Kapal Van Der Wijck", pengarang: "Hamka", tahun: 1939 },
+            { judul: "Garis Waktu", pengarang: "Fiersa Besari", tahun: 2017 },
+            { judul: "Cantik Itu Luka", pengarang: "Eka Kurniawan", tahun: 2002 },
+            { judul: "Pulang", pengarang: "Tere Liye", tahun: 2011 },
+            { judul: "Pergi", pengarang: "Tere Liye", tahun: 2012 },
+            { judul: "Kambing Jantan: Sebuah Catatan Harian Pelajar Bodoh", pengarang: "Raditya Dika", tahun: 2005 },
+            { judul: "Madre", pengarang: "Dee Lestari", tahun: 2012 },
+            { judul: "Bumi", pengarang: "Tere Liye", tahun: 2005 },
+            { judul: "Ketika Cinta Bertasbih", pengarang: "Habiburrahman El Shirazy", tahun: 2004 },
+            { judul: "The Rainbow Troops", pengarang: "Andrea Hirata", tahun: 2005 },
+            { judul: "Negeri 5 Menara", pengarang: "Ahmad Fuadi", tahun: 2009 },
+            { judul: "Edensor", pengarang: "Andrea Hirata", tahun: 2007 }
+        ];
+
+        // Fungsi untuk menampilkan koleksi dalam tabel
+        function tampilkanKoleksi(koleksi) {
+            var tableBody = $('#collectionTable tbody');
+            tableBody.empty();
+
+            $.each(koleksi, function(index, item) {
+                var row = $('<tr>');
+                row.append('<td>' + item.judul + '</td>');
+                row.append('<td>' + item.pengarang + '</td>');
+                row.append('<td>' + item.tahun + '</td>');
+                tableBody.append(row);
+            });
+        }
+
+        // Panggil fungsi untuk menampilkan koleksi saat halaman dimuat
+        $(document).ready(function() {
+            tampilkanKoleksi(koleksi);
+        });
+
+        // Fungsi untuk melakukan pencarian koleksi
+        $('#searchButton').click(function() {
+            var keyword = $('#searchInput').val().toLowerCase();
+            var hasilPencarian = [];
+
+            if (keyword === '') {
+                // Jika input pencarian kosong, tampilkan semua koleksi
+                hasilPencarian = koleksi;
+            } else {
+                // Jika ada input pencarian, cari koleksi yang sesuai
+                $.each(koleksi, function(index, item) {
+                    if (item.judul.toLowerCase().indexOf(keyword) !== -1 || item.pengarang.toLowerCase().indexOf(keyword) !== -1) {
+                        hasilPencarian.push(item);
+                    }
+                });
+            }
+
+            // Tampilkan hasil pencarian
+            tampilkanKoleksi(hasilPencarian);
+        });
+    </script>
+</body>
+</html>
