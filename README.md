@@ -33,7 +33,7 @@
 <a href="modul 5 no 3.html">Pameran Buku</a>
 <a href="modul 6.html">Javascript library</a>
 <a href="modul 7 belajar.html">Belajar PHP</a>
-<a href="kalkulator.php">Kalkulator</a>
+<a href="modul 7 no 2.html">Kalkulator</a>
 
 
 </div>
