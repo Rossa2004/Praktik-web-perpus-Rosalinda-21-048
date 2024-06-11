@@ -32,6 +32,8 @@
 <a href="modul 5 no 3 tp js.html">Pameran Buku</a>
 <a href="modul 5 no 3.html">Pameran Buku</a>
 <a href="modul 6.html">Javascript library</a>
+<a href="modul 7 no 1.php">Belajar PHP</a>
+<a href="kalkulator.php">Kalkulator</a>
 
 
 </div>
