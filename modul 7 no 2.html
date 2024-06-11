@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+</head>
+<body>
+    <h2>Kalkulator</h2>
+    <label for="bilangan1">Bilangan Pertama:</label>
+    <input type="number" id="bilangan1" name="bilangan1" required><br><br>
+
+    <label for="bilangan2">Bilangan Kedua:</label>
+    <input type="number" id="bilangan2" name="bilangan2" required><br><br>
+
+    <label for="operator">Pilih Operasi:</label>
+    <select id="operator" name="operator">
+        <option value="tambah">Tambah (+)</option>
+        <option value="kurang">Kurang (-)</option>
+        <option value="kali">Kali (*)</option>
+        <option value="bagi">Bagi (/)</option>
+    </select><br><br>
+
+    <button onclick="hitung()">Hitung</button>
+
+    <h2 id="hasilPerhitungan"></h2>
+
+    <script>
+        function hitung() {
+            var bilangan1 = parseFloat(document.getElementById('bilangan1').value);
+            var bilangan2 = parseFloat(document.getElementById('bilangan2').value);
+            var operator = document.getElementById('operator').value;
+            var hasil;
+
+            switch (operator) {
+                case 'tambah':
+                    hasil = bilangan1 + bilangan2;
+                    break;
+                case 'kurang':
+                    hasil = bilangan1 - bilangan2;
+                    break;
+                case 'kali':
+                    hasil = bilangan1 * bilangan2;
+                    break;
+                case 'bagi':
+                    if (bilangan2 != 0) {
+                        hasil = bilangan1 / bilangan2;
+                    } else {
+                        alert("Error: Bilangan kedua tidak boleh nol");
+                        return;
+                    }
+                    break;
+                default:
+                    alert("Error: Operator tidak valid");
+                    return;
+            }
+
+            document.getElementById('hasilPerhitungan').innerHTML = "Hasil perhitungan: " + hasil;
+        }
+    </script>
+</body>
+</html>
